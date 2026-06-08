@@ -35,7 +35,9 @@ box-shadow:0 2px 15px rgba(0,0,0,.08);
 z-index:1000;
 }
 
-nav h2{
+.logo{
+font-size:24px;
+font-weight:800;
 color:#16a34a;
 }
 
@@ -59,7 +61,7 @@ justify-content:center;
 text-align:center;
 padding:40px;
 background:
-linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
+linear-gradient(rgba(15,23,42,.78),rgba(15,23,42,.78)),
 url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=80');
 background-size:cover;
 background-position:center;
@@ -67,17 +69,17 @@ color:white;
 }
 
 .hero-content{
-max-width:900px;
+max-width:950px;
 }
 
 .hero h1{
-font-size:64px;
-line-height:1.1;
+font-size:68px;
+line-height:1.05;
 margin-bottom:25px;
 }
 
 .hero p{
-font-size:22px;
+font-size:24px;
 opacity:.95;
 margin-bottom:35px;
 }
@@ -95,6 +97,13 @@ transition:.3s;
 
 .btn:hover{
 transform:translateY(-3px);
+}
+
+.trustbar{
+background:white;
+padding:25px;
+text-align:center;
+font-weight:600;
 }
 
 .section{
@@ -156,6 +165,25 @@ font-size:60px;
 font-weight:800;
 }
 
+.pricing-box{
+background:#ecfdf5;
+padding:30px;
+border-radius:18px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.pricing-box h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:40px;
+font-weight:800;
+color:#16a34a;
+margin-top:15px;
+}
+
 .contact-form{
 max-width:700px;
 margin:auto;
@@ -188,6 +216,20 @@ text-align:center;
 padding:40px;
 }
 
+.floating-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#22c55e;
+color:white;
+padding:18px 24px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+z-index:9999;
+}
+
 @media(max-width:768px){
 
 nav{
@@ -201,7 +243,7 @@ justify-content:center;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 }
 
 .hero p{
@@ -221,7 +263,9 @@ grid-template-columns:1fr;
 
 <nav>
 
-<h2>SolarLead Systems</h2>
+<div class="logo">
+☀️ SolarLead Systems
+</div>
 
 <ul>
 <li><a href="#leistungen">Leistungen</a></li>
@@ -236,7 +280,9 @@ grid-template-columns:1fr;
 
 <div class="hero-content">
 
-<h1>Mehr qualifizierte Solar-Anfragen in Ihrer Region.</h1>
+<h1>
+Mehr qualifizierte Solar-Anfragen in 30 Tagen – ohne Kaltakquise.
+</h1>
 
 <p>
 Wir helfen Solarteuren dabei, mehr Beratungstermine und Aufträge zu gewinnen – durch Leadgenerierung, Premium-Websites und KI-Automatisierung.
@@ -247,6 +293,15 @@ Kostenlose Potenzialanalyse
 </a>
 
 </div>
+
+</section>
+
+<section class="trustbar">
+
+✓ DSGVO-konform &nbsp;&nbsp;&nbsp;
+✓ Transparente Auswertung &nbsp;&nbsp;&nbsp;
+✓ Persönlicher Ansprechpartner &nbsp;&nbsp;&nbsp;
+✓ KI-gestützte Prozesse
 
 </section>
 
@@ -358,23 +413,26 @@ Beispielzahlen
 <section class="section" id="referenzen">
 
 <h2 class="section-title">
-Referenzen
+Kundenstimmen
 </h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Solarbetrieb Nord</h3>
+<h3>Muster Solar GmbH</h3>
+<p>⭐⭐⭐⭐⭐</p>
 <p>+42 qualifizierte Anfragen in 30 Tagen.</p>
 </div>
 
 <div class="card">
-<h3>Energiepartner Süd</h3>
+<h3>EnergiePartner Süd</h3>
+<p>⭐⭐⭐⭐⭐</p>
 <p>+18 Beratungstermine innerhalb von 4 Wochen.</p>
 </div>
 
 <div class="card">
 <h3>Solar Technik West</h3>
+<p>⭐⭐⭐⭐⭐</p>
 <p>Mehr Auslastung durch planbare Leadgenerierung.</p>
 </div>
 
@@ -415,6 +473,20 @@ Häufige Fragen
 Kostenlose Potenzialanalyse
 </h2>
 
+<div class="pricing-box">
+
+<h3>Komplettsystem für Solarteure</h3>
+
+<p>
+Leadgenerierung • Website • KI-Automatisierung
+</p>
+
+<div class="price">
+ab 990 €/Monat
+</div>
+
+</div>
+
 <form class="contact-form">
 
 <input type="text" placeholder="Name">
@@ -426,7 +498,7 @@ Kostenlose Potenzialanalyse
 <textarea rows="5" placeholder="Ihre Nachricht"></textarea>
 
 <button>
-Analyse anfordern
+Kostenloses Strategiegespräch buchen
 </button>
 
 </form>
@@ -435,13 +507,17 @@ Analyse anfordern
 
 <footer>
 
-<h2>SolarLead Systems</h2>
+<h2>☀️ SolarLead Systems</h2>
 
 <p>
 Leadgenerierung • Websites • KI-Automatisierung
 </p>
 
 </footer>
+
+<a href="#kontakt" class="floating-btn">
+Kostenlose Analyse
+</a>
 
 </body>
 </html>
